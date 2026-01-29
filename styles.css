@@ -1,9 +1,10 @@
 html,
 body {
+    margin:26px;
     color: green;
-    cursor: none !important; /* hide real cursor */
-    height: 100%;
-    width: 100%;
+    cursor: none !important; 
+
+    /*background-image: "/images/background.jpg";*/
 }
 * {
     cursor: none !important;
@@ -68,4 +69,277 @@ body {
 .cursor svg {
     width: 100%;
     height: 100%;
+}
+
+#dodo-corner,
+#blahaj-corner {
+    position: fixed;
+    bottom: 0;
+    height: auto;
+}
+
+#dodo-corner {
+    width: 20vw;
+    min-width: 200px;
+    right: 0;
+}
+
+#blahaj-corner {
+    width: 25vw;
+    min-width:250px;
+    left: 0;
+}
+
+/* Phones */
+@media (max-width: 600px) {
+    #dodo-corner {
+        width: 200px;
+    }
+    #blahaj-corner {
+        width: 250px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+
+    /* colors */
+    --content: #20d57e;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url('https://sadhost.neocities.org/fonts/Nunito-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url('https://sadhost.neocities.org/fonts/Nunito-Italic.ttf');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url('https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    /* you can delete the line below if you'd prefer to not use an image */
+    background-size: 65px;
+    color: #fceaff;
+    background-image: url("/images/background3.png");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#container {
+    max-width: 900px;
+
+    margin: 0 auto; /*centers the page*/
+}
+
+
+#container a {
+    color: #88be00;
+    font-weight: bold;
+
+}
+
+#header {
+    width: 100%;
+    background-image: url(/images/dodo-and-quinn.png);
+    background-size: cover;      /* or contain depending what you want */
+    background-position: center;
+    aspect-ratio: 12 / 3;         
+}
+
+/* navigation section!! */
+#navbar {
+    height: 40px;
+    background-color: #7b744f;
+    /* navbar color */
+    width: 100%;
+}
+
+#navbar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+#navbar li {
+    padding-top: 10px;
+}
+
+#navbar li a {
+    color: #ffda50;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+#navbar li a:hover {
+    color: #a49cba;
+    text-decoration: underline;
+}
+
+#flex {
+    display: flex;
+}
+
+aside {
+    background-color: #827242;
+    width: 200px;
+    padding: 20px;
+    font-size: smaller;
+}
+
+
+/* this is the color of the main content area,
+between the sidebars! */
+main {
+    background-color: #6f6822;
+    flex: 1;
+    padding: 20px;
+    order: 2;
+}
+
+/* what's this "order" stuff about??
+allow me to explain!
+if you're using both sidebars, the "order" value
+tells the CSS the order in which to display them.
+left sidebar is 1, content is 2, and right sidebar is 3! */
+
+*/ #leftSidebar {
+    order: 1;
+}
+
+#rightSidebar {
+    order: 3;
+}
+
+footer {
+    background-color: #857951;
+    /* background color for footer */
+    width: 100%;
+    height: 40px;
+    padding: 20px;
+    text-align: center;
+    /* this centers the footer text */
+}
+
+h1,
+h2,
+h3 {
+    color: #e6af7b;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+strong {
+    /* this styles bold text */
+    color: #0fc4a6;
+}
+
+/* this is just a cool box, it's the darker colored one */
+.box {
+    background-color: #805a36;
+    /*border: 1px solid #000000;*/
+    padding: 10px;
+}
+
+/* CSS for extras */
+
+#topBar {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    font-size: smaller;
+    background-color: #895f3d;
+}
+
+
+/* BELOW THIS POINT IS MEDIA QUERY */
+
+/* so you wanna change the width of your page? 
+by default, the container width is 900px.
+in order to keep things responsive, take your new height,
+and then subtrack it by 100. use this new number as the 
+"max-width" value below
+*/
+
+@media only screen and (max-width: 800px) {
+    #flex {
+        flex-wrap: wrap;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    /* the order of the items is adjusted here for responsiveness!
+since the sidebars would be too small on a mobile device.
+feel free to play around with the order!
+*/
+    main {
+        order: 1;
+    }
+
+    #leftSidebar {
+        order: 2;
+    }
+
+    #rightSidebar {
+        order: 3;
+    }
+
+    #navbar ul {
+        flex-wrap: wrap;
+    }
 }
