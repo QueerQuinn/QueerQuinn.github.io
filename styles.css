@@ -100,7 +100,11 @@ body {
     }
 }
 
-
+.box-type-shit { /* what am i doing? i need to actually learn ts 🥀*/
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}
 
 
 
@@ -291,7 +295,8 @@ strong {
 .box {
     background-color: #805a36;
     /*border: 1px solid #000000;*/
-    padding: 10px;
+    padding:  1px 8px 1px 9px  ;
+    margin-top: 10px;
 }
 
 /* CSS for extras */
